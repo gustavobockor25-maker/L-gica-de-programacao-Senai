@@ -80,3 +80,56 @@ Tiposdedados.pop()
 console.log(Tiposdedados)
 Tiposdedados.push("futebol")
 console.log(Tiposdedados)
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 6 – indexOf, includes
+// ------------------------------------------------------------
+// a) Dado um array de nomes, verifique o índice de um nome específico.
+// b) Busque por um nome específico que não existe na lista.
+
+const nomes = ["Ana", "Bruno", "Carolina", "Daniel", "Eduardo"];
+// → Seu código aqui:
+const indiceBruno = nomes.indexOf("Bruno");
+console.log(indiceBruno); 
+const indiceJoao = nomes.indexOf("João");
+console.log(indiceJoao); 
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 7 – slice, concat
+// ------------------------------------------------------------
+// a) Dado dois arrays de letras, junte os 2 em um só usando concat() e exiba o resultado.
+// b) Use slice para criar uma nova array, contendo somente os elementos entre a 2ª e a 4ª posição
+//    do array que você criou usando o concat() e exiba o resultado.
+
+const letras1 = ["a", "b", "c", "d", "e"];
+const letras2 = ["f", "g"];
+// → Seu código aqui:
+const letrasJuntas = letras1.concat(letras2);
+console.log("array concatenado:", letrasJuntas);
+const novoArray = letrasJuntas.slice(1, 4);
+console.log("array com slice (2ª até 4ª posição):", novoArray);
+
+
+// ------------------------------------------------------------
+// EXERCÍCIO 8 – arrays aninhados (array dentro de array) e flat
+// ------------------------------------------------------------
+// a) Crie um array aninhado, ebixa-o. Acesso elementos internos deste array.
+// b) Use flat para achatar o array em um unico nível (os arrays internos se tornam elementos individuais) e exiba-o.
+
+// → Seu código aqui:
+// a) Criando um array aninhado
+const arrayAninhado = [
+    ["João", "Maria"],
+    ["Carlos", "Ana"],
+    ["Pedro", "Luiza"]
+  ];
+  
+console.log("Array aninhado:", arrayAninhado);
+console.log("Primeiro grupo:", arrayAninhado[0]);
+console.log("Primeiro nome do primeiro grupo:", arrayAninhado[0][0]);
+console.log("Segundo nome do segundo grupo:", arrayAninhado[1][1]);
+const arrayAchatado = arrayAninhado.flat();
+console.log("Array achatado com flat():", arrayAchatado);
+
