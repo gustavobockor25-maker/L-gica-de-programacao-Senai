@@ -101,15 +101,18 @@ console.log(indiceJoao);
 // ------------------------------------------------------------
 // a) Dado dois arrays de letras, junte os 2 em um só usando concat() e exiba o resultado.
 // b) Use slice para criar uma nova array, contendo somente os elementos entre a 2ª e a 4ª posição
-//    do array que você criou usando o concat() e exiba o resultado.
 
 const letras1 = ["a", "b", "c", "d", "e"];
 const letras2 = ["f", "g"];
-// → Seu código aqui:
-const letrasJuntas = letras1.concat(letras2);
-console.log("array concatenado:", letrasJuntas);
-const novoArray = letrasJuntas.slice(1, 4);
-console.log("array com slice (2ª até 4ª posição):", novoArray);
+
+
+const todasLetras = letras1.concat(letras2);
+console.log("Array concatenado:");
+console.log(todasLetras);
+
+const parteDoArray = todasLetras.slice(1, 4);
+console.log("Array com slice (2ª até 4ª posição):");
+console.log(parteDoArray);
 
 
 // ------------------------------------------------------------
@@ -120,16 +123,29 @@ console.log("array com slice (2ª até 4ª posição):", novoArray);
 
 // → Seu código aqui:
 // a) Criando um array aninhado
-const arrayAninhado = [
+
+const nomes = [
     ["João", "Maria"],
     ["Carlos", "Ana"],
     ["Pedro", "Luiza"]
   ];
   
-console.log("Array aninhado:", arrayAninhado);
-console.log("Primeiro grupo:", arrayAninhado[0]);
-console.log("Primeiro nome do primeiro grupo:", arrayAninhado[0][0]);
-console.log("Segundo nome do segundo grupo:", arrayAninhado[1][1]);
-const arrayAchatado = arrayAninhado.flat();
-console.log("Array achatado com flat():", arrayAchatado);
+  console.log("array completo:");
+  console.log(nomes);
+  
+
+  console.log("primeiro grupo:");
+  console.log(nomes[0]);
+  
+ 
+  console.log("primeiro nome do primeiro grupo:");
+  console.log(nomes[0][0]);
+  
+  
+  console.log("segundo nome do segundo grupo:");
+  console.log(nomes[1][1]);
+   const nomesJuntos = nomes.flat();
+  
+  console.log("array depois de usar flat:");  
+ console.log(nomesJuntos);
 
