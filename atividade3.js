@@ -1,4 +1,5 @@
 // ============================================================
+// ============================================================
 //   ATIVIDADE 02 – Arrays (Listas) em JavaScript
 // ============================================================
 // Instruções: resolva cada exercício no espaço indicado.
@@ -124,28 +125,29 @@ console.log(parteDoArray);
 // → Seu código aqui:
 // a) Criando um array aninhado
 
-const nomes = [
+const nomes1 = [
     ["João", "Maria"],
     ["Carlos", "Ana"],
     ["Pedro", "Luiza"]
   ];
   
   console.log("array completo:");
-  console.log(nomes);
+  console.log(nomes1);
   
 
   console.log("primeiro grupo:");
-  console.log(nomes[0]);
+  console.log(nomes1[0]);
   
  
   console.log("primeiro nome do primeiro grupo:");
-  console.log(nomes[0][0]);
+  console.log(nomes1[0][0]);
   
   
   console.log("segundo nome do segundo grupo:");
-  console.log(nomes[1][1]);
-   const nomesJuntos = nomes.flat();
+  console.log(nomes1[1][1]);
+   const nomesJuntos = nomes1.flat();
   
   console.log("array depois de usar flat:");  
  console.log(nomesJuntos);
+
 
