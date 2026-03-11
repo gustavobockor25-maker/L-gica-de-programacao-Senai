@@ -135,12 +135,35 @@ console.log("_______________________________");
 // g) Exiba somente o nome e a rua do 1º usuário.
 
 // → Seu código aqui:
-const readline = require ("readline-sync");
-let usuario1 = 
+// const readline = require("readline-sync");
+
+// function criarUsuario() {
+//     let usuario = {
+//         nome: readline.question("Digite o nome: "),
+//         idade: readline.questionInt("Digite a idade: "),
+//         endereco: {
+//             cidade: readline.question("Digite a cidade: "),
+//             rua: readline.question("Digite a rua: "),
+//             numero: readline.questionInt("Digite o numero: ")
+//         }
+//     };
+
+//     return usuario;
+// }
+
+// let usuario1 = criarUsuario();
+// let usuario2 = criarUsuario();
+// let usuario3 = criarUsuario();
+
+// let listaDeUsuarios = [usuario1, usuario2, usuario3];
+
+// console.table(listaDeUsuarios);
+// console.log("2º usuário:", listaDeUsuarios[1].nome, "-", listaDeUsuarios[1].idade);
+// console.log("Endereço do 3º usuário:", listaDeUsuarios[2].endereco);
+// console.log("1º usuário:", listaDeUsuarios[0].nome, "-", listaDeUsuarios[0].endereco.rua);
 
 
 
-console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -155,12 +178,46 @@ console.log("_______________________________");
 // g) Exiba o nome e a 3ª nota do 1º aluno.
 
 // → Seu código aqui:
+// const readline = require("readline-sync")
+
+// let turma = []
+
+// let aluno1 = {
+//   nome: readline.question("Nome do 1º aluno: "),
+//   notas: [
+//     readline.questionInt("1ª nota: "),
+//     readline.questionInt("2ª nota: "),
+//     readline.questionInt("3ª nota: ")
+//   ]
+// }
+
+// let aluno2 = {
+//   nome: readline.question("Nome do 2º aluno: "),
+//   notas: [
+//     readline.questionInt("1ª nota: "),
+//     readline.questionInt("2ª nota: "),
+//     readline.questionInt("3ª nota: ")
+//   ]
+// }
+
+// let aluno3 = {
+//   nome: readline.question("Nome do 3º aluno: "),
+//   notas: [
+//     readline.questionInt("1ª nota: "),
+//     readline.questionInt("2ª nota: "),
+//     readline.questionInt("3ª nota: ")
+//   ]
+// }
+
+// turma.push(aluno1, aluno2, aluno3)
+
+// console.table(turma)
+// console.log(turma[1].nome, turma[1].notas[0]) 
+// console.log(turma[2].nome, turma[2].notas[1]) 
+// console.log(turma[0].nome, turma[0].notas[2]) 
 
 
-console.log("_______________________________");
-
-
-// ------------------------------------------------------------
+// ------------------------------------------------------------ 
 // EXERCÍCIO 9 – Cadastro de produto
 // ------------------------------------------------------------
 // a) Peça ao usuário os seguintes dados de um produto:
@@ -176,9 +233,15 @@ console.log("_______________________________");
 //    "Produto: <nome> | Categoria: <categoria> | Estoque: <quantidade> un".
 
 // → Seu código aqui:
-
-
-console.log("_______________________________");
+// const readline = require ("readline-sync")
+// let produto ={nome: readline.question("Nome do produto?"),
+//                 categoria: readline.question("Categoria do produto?"),
+//                 preço: readline.questionFloat("Preço do produto?"),
+//                 estoque: readline.questionInt("Quantidade do produto em estoque?"),
+//                 disponivel: readline.keyInYN("está disponivel para venda?"),
+// }
+//                     console.table(produto)
+//     console.log(`Produto:${produto.nome}| Categoria:${produto.categoria}| Estoque:${produto.estoque}un`)
 
 
 // ------------------------------------------------------------
@@ -192,3 +255,25 @@ console.log("_______________________________");
 // c) Exiba a lista com console.table().
 // d) Exiba somente o nome e preço do 2 medicamento.
 // e) Exiba somente o nome e se está em estoque o 1 medicamento.
+
+// → Seu código aqui:
+// const readline = require ("readline-sync")
+// let produto ={nome: readline.question("Nome do produto?"),
+//             preço: readline.questionFloat("Preço?"),
+//             disponivel: readline.keyInYN("Está disponivel para venda?"),
+// }
+
+// let produto2 ={nome: readline.question("Nome do produto?"),
+//             preço: readline.questionFloat("Preço?"),
+//             disponivel: readline.keyInYN("Está disponivel para venda?"),
+// }
+
+
+
+
+// let estoqueFarmacia = [produto,produto2]
+// console.table(estoqueFarmacia)
+// console.log(produto2.nome)
+// console.log(produto2.preço)
+// console.log(produto.nome)
+// console.log(produto.disponivel)
