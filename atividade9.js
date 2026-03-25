@@ -287,6 +287,58 @@
 // g) Chame o professor para realizar alguns testes 🫡
 
 // → Seu código aqui:
-let lerTeclado = require('readline-sync');
-let num1 = lerTeclado.questionFloat("Digite o primeiro número: ");
-let num2 = lerTeclado.questionFloat("Digite o segundo número: ");
+const lerTeclado = require('readline-sync');
+
+
+let numeroA = lerTeclado.questionFloat("Digite o primeiro número: ");
+let numeroB = lerTeclado.questionFloat("Digite o segundo número: ");
+
+console.log("\nEscolha a operação:");
+console.log("1 – Soma");
+console.log("2 – Subtração");
+console.log("3 – Multiplicação");
+console.log("4 – Divisão");
+let operacao = lerTeclado.questionInt("Digite o número da operação: ");
+
+let simbolo;
+
+if (operacao === 1) {
+    simbolo = "+";
+} else if (operacao === 2) {
+    simbolo = "-";
+} else if (operacao === 3) {
+    simbolo = "*";
+} else if (operacao === 4) {
+    simbolo = "/";
+} else {
+    simbolo = "?";
+}
+
+let calculo = {
+    numeroA: numeroA,
+    numeroB: numeroB,
+    operacao: operacao,
+    simbolo: simbolo
+};
+
+let resultado;
+
+if (operacao === 1) {
+    resultado = numeroA + numeroB;
+} else if (operacao === 2) {
+    resultado = numeroA - numeroB;
+} else if (operacao === 3) {
+    resultado = numeroA * numeroB;
+} else if (operacao === 4) {
+    if (numeroB === 0) {
+        console.log("Erro: divisão por zero não é permitida.");
+    } else {
+        resultado = numeroA / numeroB;
+    }
+} else {
+    console.log("Operação inválida.");
+}
+
+if (resultado !== undefined) {
+    console.log(`${calculo.numeroA} ${calculo.simbolo} ${calculo.numeroB} = ${resultado}`);
+}
