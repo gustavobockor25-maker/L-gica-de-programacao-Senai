@@ -394,18 +394,55 @@
 //    Use toFixed(2) em todos os valores.
 
 // → Seu código aqui:
-const ler = require('readline-sync')
-let nome1 = ler.question("Nome do produto 1: ")
-let preco1 = ler.questionFloat("Preço do produto 1: ")
-let quantidade1 = ler.questionInt("Quantidade do produto 1: ")
+// const ler = require('readline-sync')
 
+// let nome1 = ler.question("Nome do produto 1: ")
+// let preco1 = ler.questionFloat("Preço do produto 1: ")
+// let quantidade1 = ler.questionInt("Quantidade do produto 1: ")
 
+// let produto1 = {
+//     nome: nome1,
+//     preco: preco1,
+//     quantidade: quantidade1
+// }
 
+// let nome2 = ler.question("Nome do produto 2: ")
+// let preco2 = ler.questionFloat("Preço do produto 2: ")
+// let quantidade2 = ler.questionInt("Quantidade do produto 2: ")
 
+// let produto2 = {
+//     nome: nome2,
+//     preco: preco2,
+//     quantidade: quantidade2
+// }
 
+// let nome3 = ler.question("Nome do produto 3: ")
+// let preco3 = ler.questionFloat("Preço do produto 3: ")
+// let quantidade3 = ler.questionInt("Quantidade do produto 3: ")
 
+// let produto3 = {
+//     nome: nome3,
+//     preco: preco3,
+//     quantidade: quantidade3
+// }
 
+// let carrinho = [produto1, produto2, produto3]
 
+// let total = 0
+
+// for (let produto of carrinho) {
+//     total += produto.preco * produto.quantidade
+// }
+
+// let percentual = ler.questionFloat("Percentual de desconto (%): ")
+// let desconto = total * (percentual / 100)
+// let totalComDesconto = total - desconto
+
+// console.table(carrinho)
+
+// console.log("Total sem desconto: R$ " + total.toFixed(2))
+// console.log("Desconto: R$ " + desconto.toFixed(2))
+// console.log("Total com desconto: R$ " + totalComDesconto.toFixed(2))
 
 
 
@@ -422,9 +459,20 @@ let quantidade1 = ler.questionInt("Quantidade do produto 1: ")
 //    "Olá, <nome>! Seu IMC é: <imc>"
 
 // → Seu código aqui:
+// const ler = require('readline-sync')
+// let nome = ler.question("Qual seu nome? ")
+// let peso = ler.questionInt("Qual seu peso? ")
+// let altura = ler.questionInt("Qual sua altura? ")
+// let IMC = peso/altura **2
+// let resultado = {
+// nome,
+// peso,
+// altura,
+// IMC
+// }
+// console.table(resultado)
+// console.log(`Olá, ${nome}! Seu IMC e ${IMC} `)
 
-
-console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -446,9 +494,17 @@ console.log("_______________________________");
 //    "Custo por pessoa:   R$ <custoPorPessoa>"
 
 // → Seu código aqui:
+// const ler = require('readline-sync')
+// let distancia = ler.questionInt("Distancia total da viagem em km? ")
+// let consumoMedio = ler.questionInt("Qual o consumo medio do carro? ")
+// let precoCombustível = ler.questionInt("Qual o preco do combustivel por litro? ")
+// let numPessoas = ler.questionInt("Quantas pessoas vao dividir o custo?")
+// let litros = distancia/consumoMedio
+// let custoTotal = litros*precoCombustível
+// let custoPorPessoa = custoTotal/numPessoas
+// console.log(`Distancia: ${distancia}km. Litros necessarios:${consumoMedio}L. Custo total:R$ ${custoTotal}. Custo por pessoa:R$${custoPorPessoa}`)
 
 
-console.log("_______________________________");
 
 
 // ------------------------------------------------------------
@@ -468,6 +524,21 @@ console.log("_______________________________");
 // e) Exiba no console uma mensagem com template literal resumindo o contracheque.
 
 // → Seu código aqui:
-
-
-console.log("_______________________________");
+const ler = require('readline-sync')
+let nome = ler.question("Nome do funcionario?")
+let salarioBruto = ler.questionInt("Salario bruto?")
+let percentualINSS = ler.questionInt("Percentual de desconto do INSS?")
+let percentualIR = ler.questionInt("Percentual de desconto do IR?")
+let descontoINSS = salarioBruto*(percentualINSS/100)
+let descontoIR = salarioBruto*(percentualIR/100)
+let salarioLiquido = salarioBruto-descontoINSS-descontoIR
+let contracheque = {
+nome:nome,
+salarioBruto:salarioBruto,
+percentualINSS:percentualINSS,
+descontoINSS:descontoINSS,
+descontoIR:descontoIR,
+salarioLiquido:salarioLiquido,
+}
+console.table(contracheque)
+console.log(`Nome:${nome}. Salario Bruto: ${salarioBruto}. Desconto INSS:${descontoINSS}. Desconto IR:${descontoIR}.Salario liquido:${salarioLiquido}`)
